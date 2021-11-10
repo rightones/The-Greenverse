@@ -34,7 +34,7 @@ const Header = ({ children }: HeaderProps) => {
     return (
         <Layout sidebar={<SideNav />} inner>
             <div style={{ marginBottom: 48 }} />
-            <Image src={Logo} alt="Illogical Love" />
+            <Image src={Logo} alt="Illogical Love" priority />
             <div style={{ marginBottom: 24 }} />
             <Link href={router.asPath} locale={router.locale === "ko" ? "en" : "ko"} passHref>
                 <LocaleButton className="button">
