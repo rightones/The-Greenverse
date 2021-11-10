@@ -22,6 +22,7 @@ const FooterContainer = styled.footer`
         font-style: normal;
         line-height: 1.5;
         letter-spacing: normal;
+        text-transform: uppercase;
     }
 
     button {
@@ -39,7 +40,11 @@ const Footer = () => {
 
     return (
         <FooterContainer>
-            <span>This artwork is commissioned by The Greenverse 2021</span>
+            <span>
+                This artwork is commissioned by
+                <br />
+                The Greenverse 2021
+            </span>
             <span>본 작품은 그린버스 2021의 커미션으로 제작되었습니다.</span>
             <div style={{ height: 32 }} />
             <span>SOOAH KWAK & CHANU LEE</span>
