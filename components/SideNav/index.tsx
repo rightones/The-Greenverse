@@ -5,6 +5,8 @@ import Link from "next/link";
 const SidebarContainer = styled.nav`
     display: flex;
     flex-direction: column;
+    align-items: center;
+    color: white;
 `;
 
 const SidebarItem = styled.a`
@@ -18,10 +20,30 @@ const SidebarItem = styled.a`
     text-decoration: none;
     color: white;
     padding: 16px 0;
+    align-self: stretch;
+`;
+
+const AnchorButton = styled.div`
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    text-decoration: none;
+    color: white;
+    padding: 2px 0;
+    cursor: pointer;
 `;
 
 const SideNav = () => {
     const router = useRouter();
+    const handleScroll = (el: string) => {
+        const element = document.getElementById(el);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
     return (
         <SidebarContainer>
             <Link href="/" passHref>
@@ -29,6 +51,22 @@ const SideNav = () => {
                     <span>{router.locale === "ko" ? "정보" : "INFO"}</span>
                 </SidebarItem>
             </Link>
+            <div style={{ height: 16 }} />
+            <AnchorButton className="button" role="button" onClick={() => handleScroll("5m")}>
+                <span>5m</span>
+            </AnchorButton>
+            ·
+            <AnchorButton className="button" role="button" onClick={() => handleScroll("15m")}>
+                <span>15m</span>
+            </AnchorButton>
+            ·
+            <AnchorButton className="button" role="button" onClick={() => handleScroll("25m")}>
+                <span>25m</span>
+            </AnchorButton>
+            ·
+            <AnchorButton className="button" role="button" onClick={() => handleScroll("35m")}>
+                <span>35m</span>
+            </AnchorButton>
         </SidebarContainer>
     );
 };

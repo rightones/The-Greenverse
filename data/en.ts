@@ -35,6 +35,27 @@ const en: Data = [
             "figure 4. Protesting",
         ],
     },
+    {
+        title: "Calling and Responding",
+        content: [
+            "When we talk to seaweed, does the seaweed respond? If it does, how can we hear and interpret this response? We do not consider seaweed as voiceless just because we cannot hear their voices. Instead of talking in their behalf and taking their voices, we try to stand in solidarity and make stories together. We are not trying to become seaweed, but are trying to become together with seaweed.",
+        ],
+        figure: [
+            "figure 1.\nPurchasing dried seaweed at a local market",
+            "figure 2.\nSoaking the seaweed in water",
+            "figure 3.\nHanging the seaweed on a clothesline",
+            "figure 4.\nHanging the seaweed on a clothesline",
+            "figure 5.\nGenerating music",
+            "figure 6.\nPlaying the music back at the market",
+        ],
+    },
+    {
+        title: "Neither a Utopia nor a Dystopia",
+        content: [
+            "A future in which the definition of natural and unnatural is newly established is neither a utopia nor a dystopia. By acknowledging that no world is completely perfect or hopeless, we can find clues to navigate the existential problems that we are currently facing in the climate crisis. With a soft sense of imagination, we can overcome the climate crisis and newly establish the ‘natural’.",
+        ],
+        figure: [],
+    },
 ];
 
 export default en;

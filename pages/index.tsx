@@ -13,6 +13,7 @@ import DSC01900 from "../public/image/DSC01900.png";
 import DSC01967 from "../public/image/DSC01967.jpg";
 import natick from "../public/image/natick.jpeg";
 import ko from "../data/ko";
+import Footer from "../components/Footer";
 
 interface HomeProps {
     data: Data;
@@ -39,7 +40,7 @@ const Home = ({ data }: HomeProps) => {
                     </h1>
                     <p>{data[1].content[0]}</p>
                     <figure>
-                        <Image src={natick} />
+                        <Image src={natick} alt={data[1].figure[0]} />
                         <figcaption>{data[1].figure[0]}</figcaption>
                     </figure>
                     <p>{data[1].content[1]}</p>
@@ -50,16 +51,16 @@ const Home = ({ data }: HomeProps) => {
                         <span className="title">{data[2].title}</span>
                     </h1>
                     <figure>
-                        <Image src={DSC01874} />
+                        <Image src={DSC01874} alt={data[2].figure[0]} />
                         <figcaption>{data[2].figure[0]}</figcaption>
                     </figure>
                     <div className="row">
                         <figure>
-                            <Image src={DSC01900} />
+                            <Image src={DSC01900} alt={data[2].figure[1]} />
                             <figcaption>{data[2].figure[1]}</figcaption>
                         </figure>
                         <figure>
-                            <Image src={DSC01967} />
+                            <Image src={DSC01967} alt={data[2].figure[2]} />
                             <figcaption>{data[2].figure[2]}</figcaption>
                         </figure>
                     </div>
@@ -76,12 +77,67 @@ const Home = ({ data }: HomeProps) => {
                         {data[2].content[3]}
                     </blockquote>
                     <figure>
-                        <Image src={DSC01809} />
+                        <Image src={DSC01809} alt={data[2].figure[3]} />
                         <figcaption>{data[2].figure[3]}</figcaption>
                     </figure>
                     <p>{data[2].content[4]}</p>
                 </Section>
+                <Section id="25m">
+                    <h1>
+                        <span className="subtitle">Project 02.</span>
+                        <span className="title">{data[3].title}</span>
+                    </h1>
+                    <figure style={{ marginBottom: "32px" }}>
+                        <video autoPlay loop muted>
+                            <source src="/video/1.mov" type='video/mp4; codecs="hvc1"' />
+                        </video>
+                        <figcaption>{data[3].figure[0]}</figcaption>
+                    </figure>
+
+                    <figure style={{ width: "230px", marginBottom: "32px" }}>
+                        <video autoPlay loop muted>
+                            <source src="/video/2.mov" type='video/mp4; codecs="hvc1"' />
+                        </video>
+                        <figcaption>{data[3].figure[1]}</figcaption>
+                    </figure>
+
+                    <figure style={{ width: "230px", float: "right", marginBottom: "32px" }}>
+                        <video autoPlay loop muted>
+                            <source src="/video/3.mov" type='video/mp4; codecs="hvc1"' />
+                        </video>
+                        <figcaption>{data[3].figure[2]}</figcaption>
+                    </figure>
+
+                    <figure style={{ width: "147px", clear: "right", marginBottom: "32px" }}>
+                        <video autoPlay loop muted>
+                            <source src="/video/4.mov" type='video/mp4; codecs="hvc1"' />
+                        </video>
+                        <figcaption>{data[3].figure[3]}</figcaption>
+                    </figure>
+                    <figure style={{ marginBottom: "32px" }}>
+                        <video autoPlay loop muted>
+                            <source src="/video/6.mov" type='video/mp4; codecs="hvc1"' />
+                        </video>
+                        <figcaption>{data[3].figure[4]}</figcaption>
+                    </figure>
+                    <figure style={{ marginBottom: "32px" }}>
+                        <video autoPlay loop muted>
+                            <source src="/video/7.mov" type='video/mp4; codecs="hvc1"' />
+                        </video>
+                        <figcaption>{data[3].figure[5]}</figcaption>
+                    </figure>
+
+                    <p>{data[3].content[0]}</p>
+                </Section>
+                <Section id="35m">
+                    <h1>
+                        <span className="subtitle">Project 03.</span>
+                        <span className="title">{data[4].title}</span>
+                    </h1>
+                    <p>{data[4].content[0]}</p>
+                </Section>
             </Layout>
+            <Footer />
         </>
     );
 };

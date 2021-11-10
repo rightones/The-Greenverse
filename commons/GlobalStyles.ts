@@ -41,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
         margin: 0 0 16px 0;
         
         .subtitle{
-            display: inline-block;
+            display: block;
             font-size: 12px;
             font-weight: 500;
             font-stretch: normal;
@@ -53,8 +53,7 @@ const GlobalStyles = createGlobalStyle`
             margin-bottom: 4px;
         }
         .title{
-
-            display: inline-block;
+            display: block;
             font-size: 24px;
             font-weight: 500;
             font-stretch: normal;
@@ -67,8 +66,12 @@ const GlobalStyles = createGlobalStyle`
     
     figure {
         margin: 24px 0;
-        img {
+        img, video {
             border-radius: 8px;
+            width: 100%;
+        }
+        video {
+            background-color: dimgray;
         }
         figcaption {
             margin-top:4px;
@@ -81,6 +84,7 @@ const GlobalStyles = createGlobalStyle`
             letter-spacing: normal;
             text-align: center;
             color: rgba(0, 0, 0, 0.5);
+            white-space: pre-wrap;
         }
     }
     

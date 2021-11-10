@@ -6,7 +6,7 @@ const Container = styled.div<{ inner: boolean }>`
     grid-template-columns: auto 24px;
     grid-template-areas: "children sidebar";
     width: ${({ inner }) => (inner ? "auto" : "100%")};
-    margin: ${({ inner }) => (inner ? "0 -40px 60px 0" : "0 auto")};
+    margin: ${({ inner }) => (inner ? "0 -40px 48px 0" : "0 auto")};
     z-index: 0;
 `;
 
