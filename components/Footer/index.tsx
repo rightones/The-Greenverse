@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { useSetRecoilState } from "recoil";
 import logo from "../../public/image/logo.png";
+import { InfoStore } from "../Info";
 
-const FooterContainer = styled.div`
+const FooterContainer = styled.footer`
     display: flex;
     flex-direction: column;
     padding: 40px 24px 48px 40px;
@@ -28,10 +30,13 @@ const FooterContainer = styled.div`
         padding: 3px 8px 3px 9px;
         border-radius: 16px;
         height: 24px;
+        cursor: pointer;
     }
 `;
 
 const Footer = () => {
+    const setState = useSetRecoilState(InfoStore);
+
     return (
         <FooterContainer>
             <span>This artwork is commissioned by The Greenverse 2021</span>
@@ -40,7 +45,7 @@ const Footer = () => {
             <span>SOOAH KWAK & CHANU LEE</span>
             <span>곽수아 & 이찬우</span>
             <div style={{ height: 32 }} />
-            <button>자세히 보기</button>
+            <button onClick={() => setState(true)}>자세히 보기</button>
             <div style={{ height: 32 }} />
             <Image src={logo} />
         </FooterContainer>

@@ -14,6 +14,7 @@ import DSC01967 from "../public/image/DSC01967.jpg";
 import natick from "../public/image/natick.jpeg";
 import ko from "../data/ko";
 import Footer from "../components/Footer";
+import Info from "../components/Info";
 
 interface HomeProps {
     data: Data;
@@ -138,6 +139,7 @@ const Home = ({ data }: HomeProps) => {
                 </Section>
             </Layout>
             <Footer />
+            <Info />
         </>
     );
 };

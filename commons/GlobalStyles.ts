@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-family: "Gothic A1", -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+        font-weight: 500;
         background: #f7f9fa;
     }
 
@@ -105,7 +106,7 @@ const GlobalStyles = createGlobalStyle`
     p {
         font-size: 14px;
         color: ${themes.color.text};
-        font-weight: normal;
+        font-weight: 500;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.5;

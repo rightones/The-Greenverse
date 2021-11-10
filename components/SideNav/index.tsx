@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useSetRecoilState } from "recoil";
+import { InfoStore } from "../Info";
 
 const SidebarContainer = styled.nav`
     display: flex;
@@ -9,7 +11,7 @@ const SidebarContainer = styled.nav`
     color: white;
 `;
 
-const SidebarItem = styled.a`
+const SidebarItem = styled.div`
     border-radius: 16px 0 0 16px;
     background-color: black;
     display: flex;
@@ -21,6 +23,7 @@ const SidebarItem = styled.a`
     color: white;
     padding: 16px 0;
     align-self: stretch;
+    cursor: pointer;
 `;
 
 const AnchorButton = styled.div`
@@ -38,6 +41,7 @@ const AnchorButton = styled.div`
 
 const SideNav = () => {
     const router = useRouter();
+    const setState = useSetRecoilState(InfoStore);
     const handleScroll = (el: string) => {
         const element = document.getElementById(el);
         if (element) {
@@ -46,11 +50,9 @@ const SideNav = () => {
     };
     return (
         <SidebarContainer>
-            <Link href="/" passHref>
-                <SidebarItem className="button">
-                    <span>{router.locale === "ko" ? "정보" : "INFO"}</span>
-                </SidebarItem>
-            </Link>
+            <SidebarItem className="button" role="button" onClick={() => setState(true)}>
+                <span>{router.locale === "ko" ? "정보" : "INFO"}</span>
+            </SidebarItem>
             <div style={{ height: 16 }} />
             <AnchorButton className="button" role="button" onClick={() => handleScroll("5m")}>
                 <span>5m</span>
