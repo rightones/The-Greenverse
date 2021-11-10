@@ -90,7 +90,7 @@ const Home = ({ data }: HomeProps) => {
                     </h1>
                     <figure style={{ marginBottom: "32px" }}>
                         <video autoPlay loop muted>
-                            <source src="/video/1.mov" type='video/mp4; codecs="hvc1"' />
+                            <source src="/video/1_1.mp4" type='video/mp4; codecs="hvc1"' />
                             <source src="/video/1.mp4" type="video/mp4" />
                         </video>
                         <figcaption>{data[3].figure[0]}</figcaption>
@@ -98,7 +98,7 @@ const Home = ({ data }: HomeProps) => {
 
                     <figure style={{ width: "230px", marginBottom: "32px" }}>
                         <video autoPlay loop muted>
-                            <source src="/video/2.mov" type='video/mp4; codecs="hvc1"' />
+                            <source src="/video/2_1.mp4" type='video/mp4; codecs="hvc1"' />
                             <source src="/video/2.mp4" type="video/mp4" />
                         </video>
                         <figcaption>{data[3].figure[1]}</figcaption>
@@ -106,7 +106,7 @@ const Home = ({ data }: HomeProps) => {
 
                     <figure style={{ width: "230px", float: "right", marginBottom: "32px" }}>
                         <video autoPlay loop muted>
-                            <source src="/video/3.mov" type='video/mp4; codecs="hvc1"' />
+                            <source src="/video/3_1.mp4" type='video/mp4; codecs="hvc1"' />
                             <source src="/video/3.mp4" type="video/mp4" />
                         </video>
                         <figcaption>{data[3].figure[2]}</figcaption>
@@ -114,21 +114,21 @@ const Home = ({ data }: HomeProps) => {
 
                     <figure style={{ width: "147px", clear: "right", marginBottom: "32px" }}>
                         <video autoPlay loop muted>
-                            <source src="/video/4.mov" type='video/mp4; codecs="hvc1"' />
+                            <source src="/video/4_1.mp4" type='video/mp4; codecs="hvc1"' />
                             <source src="/video/4.mp4" type="video/mp4" />
                         </video>
                         <figcaption>{data[3].figure[3]}</figcaption>
                     </figure>
                     <figure style={{ marginBottom: "32px" }}>
                         <video autoPlay loop muted>
-                            <source src="/video/6.mov" type='video/mp4; codecs="hvc1"' />
+                            <source src="/video/6_1.mp4" type='video/mp4; codecs="hvc1"' />
                             <source src="/video/6.mp4" type="video/mp4" />
                         </video>
                         <figcaption>{data[3].figure[4]}</figcaption>
                     </figure>
                     <figure style={{ marginBottom: "32px" }}>
                         <video autoPlay loop muted>
-                            <source src="/video/7.mov" type='video/mp4; codecs="hvc1"' />
+                            <source src="/video/7_1.mp4" type='video/mp4; codecs="hvc1"' />
                             <source src="/video/7.mp4" type="video/mp4" />
                         </video>
                         <figcaption>{data[3].figure[5]}</figcaption>
