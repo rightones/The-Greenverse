@@ -65,6 +65,7 @@ const GlobalStyles = createGlobalStyle`
     }
     
     figure {
+        
         margin: 24px 0;
         img, video {
             border-radius: 8px;
