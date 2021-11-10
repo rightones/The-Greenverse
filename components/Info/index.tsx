@@ -163,8 +163,10 @@ const Info = () => {
                                                 <animated.div style={styles2}>
                                                     <Section>
                                                         <SectionHeader>
-                                                            <p>
-                                                                This artwork is commissioned by The Greenverse 2021
+                                                            <p style={{ textTransform: "uppercase" }}>
+                                                                This artwork is commissioned by
+                                                                <br />
+                                                                The Greenverse 2021
                                                                 <br />본 작품은 그린버스 2021의 커미션으로
                                                                 제작되었습니다.
                                                             </p>
