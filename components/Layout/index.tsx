@@ -23,11 +23,12 @@ interface LayoutProps {
     sidebar: React.ReactNode;
     children: React.ReactNode;
     inner?: boolean;
+    id?: string;
 }
 
-const Layout = ({ sidebar, children, inner = false }: LayoutProps) => {
+const Layout = ({ sidebar, children, inner = false, id }: LayoutProps) => {
     return (
-        <Container inner={inner}>
+        <Container inner={inner} id={id}>
             <Sidebar>{sidebar}</Sidebar>
             <Children inner={inner}>{children}</Children>
         </Container>

@@ -1,55 +1,94 @@
 import { useRouter } from "next/router";
+import { GetStaticProps } from "next";
+import Image from "next/image";
 import Header from "../components/Header";
 import Layout from "../components/Layout";
 import Sidebar from "../components/Sidebar";
 import Section from "../components/Section";
+import en from "../data/en";
+import { Data } from "../data";
+import DSC01809 from "../public/image/DSC01809.png";
+import DSC01874 from "../public/image/DSC01874.jpg";
+import DSC01900 from "../public/image/DSC01900.png";
+import DSC01967 from "../public/image/DSC01967.jpg";
+import natick from "../public/image/natick.jpeg";
+import ko from "../data/ko";
 
-const Home = () => {
+interface HomeProps {
+    data: Data;
+}
+
+const Home = ({ data }: HomeProps) => {
     const router = useRouter();
     return (
         <>
-            <Header>
-                <p>
-                    {router.locale === "ko"
-                        ? "밝은 공자는 하는 되려니와, 사막이다. 바로 목숨이 우리의 찬미를 힘차게 만물은 풍부하게 대고, 발휘하기 이것이다. 피는 뼈 주며, 따뜻한 살 너의 남는 미인을 것이다. 피고, 피부가 그들을 원질이 듣는다. 싸인 장식하는 따뜻한 끝까지 방황하여도, 두기 힘있다. 하였으며, 황금시대를 그들은 수 속잎나고, 창공에 사막이다. 커다란 인생을 속에 발휘하기 청춘을 이 전인 얼마나 방지하는 쓸쓸하랴? 온갖 그들은 예수는 있는 목숨이 같지 풍부하게 희망의 것이다. 창공에 아니한 가슴이 위하여서."
-                        : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus vel dolor tristique finibus bibendum sit amet nibh. Vivamus purus ipsum, ullamcorper sit amet purus at, feugiat aliquet nisl."}
-                </p>
-                <p>
-                    {router.locale === "ko"
-                        ? "우리 방황하였으며, 살 예수는 두기 싶이 인생을 황금시대다. 하여도 대고, 역사를 피어나는 봄바람이다. 불어 우리는 낙원을 이상이 듣기만 심장의 찬미를 칼이다. 든 끓는 품었기 뭇 새가 주는 우리 인도하겠다는 인생의 철환하였는가? 품으며, 우리의 못하다 더운지라 동산에는 끓는 듣는다. 있는 얼마나 있을 옷을 두손을 부패뿐이다. 뛰노는 무엇을 놀이 위하여, 없는 착목한는 주는 것이다. 옷을 눈에 꽃이 충분히 몸이 그들의 영원히 있는 사막이다. 같이 가치를 바이며, 속잎나고, 보배를 인류의 불어 우리 착목한는 칼이다."
-                        : "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi vel purus egestas nunc mollis sagittis. In sed augue consectetur, aliquam arcu in, eleifend turpis."}
-                </p>
-            </Header>
             <Layout sidebar={<Sidebar />}>
-                <Section>
-                    <h1>We ARE livING in a Knotted World</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus vel dolor tristique
-                        finibus bibendum sit amet nibh. Vivamus purus ipsum, ullamcorper sit amet purus at, feugiat
-                        aliquet nisl.
-                    </p>
-                    <p>
-                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        Morbi vel purus egestas nunc mollis sagittis. In sed augue consectetur, aliquam arcu in,
-                        eleifend turpis.
-                    </p>
+                <Header>
+                    <p>{data[0].content[0]}</p>
+                    <p>{data[0].content[1]}</p>
+                    <blockquote style={{ marginTop: "40px" }}>
+                        {data[0].content[2]}
+                        <br />
+                        <br />
+                        {data[0].content[3]}
+                    </blockquote>
+                </Header>
+                <Section id="5m">
+                    <h1>
+                        <span className="title">{data[1].title}</span>
+                    </h1>
+                    <p>{data[1].content[0]}</p>
+                    <figure>
+                        <Image src={natick} />
+                        <figcaption>{data[1].figure[0]}</figcaption>
+                    </figure>
+                    <p>{data[1].content[1]}</p>
                 </Section>
-                <Section>
-                    <h1>We ARE livING in a Knotted World</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a metus vel dolor tristique
-                        finibus bibendum sit amet nibh. Vivamus purus ipsum, ullamcorper sit amet purus at, feugiat
-                        aliquet nisl.
-                    </p>
-                    <p>
-                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-                        Morbi vel purus egestas nunc mollis sagittis. In sed augue consectetur, aliquam arcu in,
-                        eleifend turpis.
-                    </p>
+                <Section id="15m">
+                    <h1>
+                        <span className="subtitle">Project 01.</span>
+                        <span className="title">{data[2].title}</span>
+                    </h1>
+                    <figure>
+                        <Image src={DSC01874} />
+                        <figcaption>{data[2].figure[0]}</figcaption>
+                    </figure>
+                    <div className="row">
+                        <figure>
+                            <Image src={DSC01900} />
+                            <figcaption>{data[2].figure[1]}</figcaption>
+                        </figure>
+                        <figure>
+                            <Image src={DSC01967} />
+                            <figcaption>{data[2].figure[2]}</figcaption>
+                        </figure>
+                    </div>
+                    <blockquote style={{ textTransform: "uppercase", margin: "40px 0 16px 0" }}>
+                        {data[2].content[0]}
+                    </blockquote>
+                    <blockquote style={{ textTransform: "uppercase", margin: "16px 0" }}>
+                        {data[2].content[1]}
+                    </blockquote>
+                    <blockquote style={{ textTransform: "uppercase", margin: "16px 0" }}>
+                        {data[2].content[2]}
+                    </blockquote>
+                    <blockquote style={{ textTransform: "uppercase", margin: "16px 0 40px 0" }}>
+                        {data[2].content[3]}
+                    </blockquote>
+                    <figure>
+                        <Image src={DSC01809} />
+                        <figcaption>{data[2].figure[3]}</figcaption>
+                    </figure>
+                    <p>{data[2].content[4]}</p>
                 </Section>
             </Layout>
         </>
     );
+};
+
+export const getStaticProps: GetStaticProps<HomeProps> = ({ locale }) => {
+    if (locale === "ko") return { props: { data: ko } };
+    return { props: { data: en } };
 };
 
 export default Home;

@@ -44,15 +44,15 @@ export default class MyDocument extends Document {
             <Html lang="ko">
                 <HeadWithoutPreload>
                     <link rel="preload" href="/fonts/Documan-Medium.woff2" as="font" crossOrigin="" type="font/woff2" />
+                    <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
                     <link
+                        href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap"
                         rel="stylesheet"
-                        type="text/css"
-                        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
                     />
                     <link
-                        href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+                        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap"
                         rel="stylesheet"
-                        type="text/css"
                     />
                 </HeadWithoutPreload>
                 <body>

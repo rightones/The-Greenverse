@@ -10,9 +10,9 @@ const SidebarItem = styled.div`
     justify-content: center;
     writing-mode: vertical-rl;
     text-orientation: sideways;
-    width: 16px;
-    padding: 10px 0;
-    border-top: 2px solid white;
+    width: 19px;
+    padding: 8px 0;
+    border-top: 1px solid white;
     margin-left: auto;
 
     & > span {
@@ -23,7 +23,7 @@ const SidebarItem = styled.div`
         letter-spacing: normal;
         text-align: center;
         color: white;
-        margin-left: -1px;
+        margin-left: 2px;
         line-height: 12px;
         z-index: 0;
         font-family: "Documan", sans-serif;
@@ -31,18 +31,20 @@ const SidebarItem = styled.div`
 `;
 
 interface SectionProps {
+    id: string;
     children: React.ReactNode;
 }
 
-const Section = ({ children }: SectionProps) => {
+const Section = ({ id, children }: SectionProps) => {
     return (
         <Layout
             sidebar={
                 <SidebarItem>
-                    <span>0m</span>
+                    <span>{id}</span>
                 </SidebarItem>
             }
             inner
+            id={id}
         >
             <SectionContainer>{children}</SectionContainer>
         </Layout>

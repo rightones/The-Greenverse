@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import styled, { ThemeProvider } from "styled-components";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import themes from "../commons/themes";
 import GlobalStyles from "../commons/GlobalStyles";
 
