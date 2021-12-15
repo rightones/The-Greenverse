@@ -7,7 +7,6 @@ import themes from "../commons/themes";
 import GlobalStyles from "../commons/GlobalStyles";
 
 const Container = styled.main`
-    max-width: 480px;
     background: ${themes.color.background};
     margin: 0 auto;
 `;

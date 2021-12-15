@@ -44,6 +44,13 @@ export default class MyDocument extends Document {
             <Html lang="ko">
                 <HeadWithoutPreload>
                     <link rel="preload" href="/fonts/Documan-Medium.woff2" as="font" crossOrigin="" type="font/woff2" />
+                    <link
+                        rel="preload"
+                        href="/fonts/MinGothic-Regular.woff2"
+                        as="font"
+                        crossOrigin=""
+                        type="font/woff2"
+                    />
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
                     <link
@@ -54,6 +61,10 @@ export default class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100;200;300;400;500;600;700&display=swap"
                         rel="stylesheet"
                     />
+                    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+                    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+                    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+                    <link rel="manifest" href="/site.webmanifest" />
                 </HeadWithoutPreload>
                 <body>
                     <Main />

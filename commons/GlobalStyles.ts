@@ -12,10 +12,17 @@ const GlobalStyles = createGlobalStyle`
         font-display: swap;
     }
 
+    @font-face {
+        font-family: 'MinGothic';
+        src: url('/fonts/MinGothic-Regular.woff2') format('woff2'),
+        url('/fonts/MinGothic-Regular.woff') format('woff');
+        font-display: swap;
+    }
+
     body {
-        font-family: "Gothic A1", -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+        font-family: "MinGothic", -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
         font-weight: 500;
-        background: #f7f9fa;
+        background: #eff1f3;
     }
 
 

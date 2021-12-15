@@ -58,12 +58,16 @@ const SideNav = () => {
                 <span>5m</span>
             </AnchorButton>
             ·
-            <AnchorButton className="button" role="button" onClick={() => handleScroll("15m")}>
-                <span>15m</span>
+            <AnchorButton className="button" role="button" onClick={() => handleScroll("12m")}>
+                <span>12m</span>
             </AnchorButton>
             ·
-            <AnchorButton className="button" role="button" onClick={() => handleScroll("25m")}>
-                <span>25m</span>
+            <AnchorButton className="button" role="button" onClick={() => handleScroll("19m")}>
+                <span>19m</span>
+            </AnchorButton>
+            ·
+            <AnchorButton className="button" role="button" onClick={() => handleScroll("27m")}>
+                <span>27m</span>
             </AnchorButton>
             ·
             <AnchorButton className="button" role="button" onClick={() => handleScroll("35m")}>

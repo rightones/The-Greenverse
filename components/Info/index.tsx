@@ -125,8 +125,8 @@ const Info = () => {
                 (styles, item) =>
                     item && (
                         <animated.div style={{ ...styles, position: "fixed", top: 0, right: 0, left: 0, bottom: 0 }}>
-                            <Wrapper>
-                                <Container>
+                            <Wrapper onClick={() => setState(false)}>
+                                <Container onClick={(e) => e.stopPropagation()}>
                                     <button onClick={() => setState(false)}>Close</button>
                                     {transitions1(
                                         (styles1, item1) =>
@@ -244,7 +244,7 @@ const Info = () => {
                                     )}
                                     <Section style={{ borderRadius: "12px 12px 0 0" }}>
                                         <SectionHeader>
-                                            <p>Credits</p>
+                                            <p>CREDITS</p>
                                             <p>
                                                 작가
                                                 <br />
