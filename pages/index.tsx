@@ -130,6 +130,15 @@ const Home = ({ data }: HomeProps) => {
                         <span className="subtitle">Project 02.</span>
                         <span className="title">{data[4].title}</span>
                     </h1>
+                    <figure>
+                        <audio
+                            controls
+                            src="/audio.m4a"
+                            controlsList="nofullscreen nodownload noremoteplayback noplaybackrate "
+                        />
+
+                        <figcaption>{data[4].figure[6]}</figcaption>
+                    </figure>
                     <p>{data[4].content[0]}</p>
                     <figure style={{ marginBottom: "32px" }}>
                         <video autoPlay loop muted>

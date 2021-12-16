@@ -125,6 +125,16 @@ const GlobalStyles = createGlobalStyle`
         margin: 24px 0;
     }
     
+    audio {
+        width: 100%;
+        
+    }
+
+    audio::-webkit-media-controls-panel {
+            background-color: white;
+        
+    }
+    
     .row {
         display: grid;
         grid-template-columns: 1fr 1fr;
