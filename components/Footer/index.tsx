@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import { useSetRecoilState } from "recoil";
-import logo from "../../public/image/logo.png";
+import logo from "../../public/image/logo.svg";
 import { InfoStore } from "../Info";
 
 const Wrapper = styled.div`
@@ -58,7 +58,9 @@ const Footer = () => {
                 <div style={{ height: 32 }} />
                 <button onClick={() => setState(true)}>자세히 보기</button>
                 <div style={{ height: 32 }} />
-                <Image src={logo} />
+                <div style={{ width: "100%" }}>
+                    <Image src={logo} layout="responsive" />
+                </div>
             </FooterContainer>
         </Wrapper>
     );
