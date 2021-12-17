@@ -28,10 +28,7 @@ const en: Data = [
             "One interesting fact is that during the two years of the project, a thin coat of algae and barnacles formed on the surface of the datacenter as well as cantaloupe-sized sea anemones on its ballast-filled base. Though it was not enough time for a huge ecosystem to form, this means that many underwater beings found the datacenter as its shelter.",
             "Apart from the effects of underwater datacenters combating climate change, it is still unknown how the increase of underwater datacenters will affect local marine ecosystems.",
         ],
-        figure: [
-            "figure 1. Server of underwater datacenter and its cooling system © Microsoft",
-            "figure 2. Sea urchin grown on the wall of underwater datacenter © Microsoft",
-        ],
+        figure: ["figure 1. underground server and its cooling system © Microsoft", "figure 2. sea urchin © Microsoft"],
     },
     {
         title: "We are living in a Knotted World",
